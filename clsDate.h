@@ -140,7 +140,7 @@ public :
     }
 
     static clsDate SystemDate_Time ()
-    { /// to get date from system
+    { // to get date from system
         time_t t = time(0);
         tm * now  = localtime(&t);
         short day , month , year , hour , minute , second;
@@ -154,7 +154,7 @@ public :
     }
 
     static string SystemDate_TimeString ()
-    { /// to get date from system
+    { // to get date from system
         time_t t = time(0);
         tm * now  = localtime(&t);
         short day , month , year , hour , minute , second;
@@ -183,6 +183,11 @@ public :
     static string TimeToStr (const clsDate & date) // to get the string from time data type 
     {
         return to_string(date._hour) + ":" + to_string(date._minute) + to_string(date._second);
+    }
+
+    string TimeToStr () // to get the string from this date data type 
+    {
+        return TimeToStr (*this);
     }
 
     static string DateToStr (const clsDate & date) // to get the string from date data type 
