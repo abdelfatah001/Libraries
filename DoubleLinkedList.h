@@ -64,6 +64,11 @@ public :
         End = NULL;
     }   
 
+    ~clsDBLinkedList ()
+    {
+        Clear();
+    }
+
     void Print ()
     {
         if (Head == NULL)
